@@ -3,45 +3,103 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Info</title>
+  <title>Let's Connect</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px;
-      background-color: #f9f9f9;
-    }
-    h1 {
-      font-size: 24px;
-    }
-    .icons {
-      margin-top: 30px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
       display: flex;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
+      padding: 30px 20px;
+    }
+
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .card-container {
+      display: flex;
+      flex-direction: row;
       gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
-    .icon-link {
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 30px;
+      width: 180px;
+      height: 180px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
       text-decoration: none;
-      color: black;
+      transition: transform 0.3s ease, background 0.3s ease;
     }
-    .icon-link img {
-      width: 100px;
-      height: 100px;
-      transition: transform 0.3s;
+
+    .card:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.15);
     }
-    .icon-link img:hover {
-      transform: scale(1.1);
+
+    .card img {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 15px;
+    }
+
+    .card span {
+      font-size: 1.1em;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        width: 140px;
+        height: 140px;
+        padding: 20px;
+      }
+
+      .card img {
+        width: 48px;
+        height: 48px;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Welcome! Connect with me:</h1>
-  <div class="icons">
-    <a class="icon-link" href="https://www.linkedin.com/in/YOURUSERNAME" target="_blank">
+  <h1>Let's Connect</h1>
+
+  <div class="card-container">
+    <a class="card" href="www.linkedin.com/in/osamareidy" target="_blank">
       <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+      <span>LinkedIn</span>
     </a>
-    <a class="icon-link" href="https://drive.google.com/YOURCVLINK" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="CV">
+
+    <a class="card" href="https://drive.google.com/file/d/1NEfVZLPpZ30JKVl8sT7ExS0RpotiVGzK/view?usp=drive_link" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="My CV">
+      <span>View My CV</span>
     </a>
   </div>
 </body>
