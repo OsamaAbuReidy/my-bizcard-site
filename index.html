@@ -11,22 +11,37 @@
       box-sizing: border-box;
     }
 
-    body {
+    body, html {
+      height: 100%;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      height: 100vh;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      overflow-x: hidden;
+    }
+
+    body {
       color: #fff;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       padding: 30px 20px;
+      background: linear-gradient(-45deg, #1e3c72, #2a5298, #0f2027, #203a43);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     h1 {
       font-size: 2.2em;
       margin-bottom: 40px;
       text-align: center;
+      background: linear-gradient(to right, #00f2fe, #4facfe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .card-container {
@@ -47,7 +62,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
       box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
       text-decoration: none;
       transition: transform 0.3s ease, background 0.3s ease;
@@ -55,7 +70,7 @@
 
     .card:hover {
       transform: translateY(-10px);
-      background: rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.2);
     }
 
     .card img {
@@ -89,15 +104,15 @@
   </style>
 </head>
 <body>
-  <h1>Let's Connect</h1>
+  <h1>Let’s Connect</h1>
 
   <div class="card-container">
-    <a class="card" href="www.linkedin.com/in/osamareidy" target="_blank">
+    <a class="card" href="https://www.linkedin.com/in/osamareidy" target="_blank">
       <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
       <span>LinkedIn</span>
     </a>
 
-    <a class="card" href="https://drive.google.com/file/d/1NEfVZLPpZ30JKVl8sT7ExS0RpotiVGzK/view?usp=drive_link" target="_blank">
+    <a class="card" href="https://drive.google.com/file/d/1NEfVZLPpZ30JKVl8sT7ExS0RpotiVGzK/view" target="_blank">
       <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="My CV">
       <span>View My CV</span>
     </a>
